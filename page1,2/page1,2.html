@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1,2.css">
+    <title>Drone Configs</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="../page1,2/page1,2.html"> Drone Config Viewer & Temperature Log Form</a>
+            <a href="../page3/page3.html">View Logs</a>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Drone Configs</h1>
+
+        <div class="section">
+            <h2>Drone Config & Temperature Log</h2>
+            
+            <div id="config" class="config-display">
+                <!-- Drone config data will be displayed here -->
+            </div>
+
+            <form id="logForm" class="log-form">
+                <input type="number" id="temperature" placeholder="Temperature in Celsius" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="page1,2.js"></script>
+</body>
+</html>
+

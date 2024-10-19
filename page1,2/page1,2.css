@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* สีพื้นหลังอ่อน */
+}
+
+.container {
+    max-width: 800px; /* ความกว้างสูงสุด */
+    margin: 0 auto; /* จัดกลางหน้า */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6f2c91; /* สีม่วงเข้ม */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+
+h2 {
+    text-align: center;
+    color: #5b3f8d; /* สีม่วงอ่อน */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+}
+
+.section {
+    padding: 20px;
+    background-color: #fff; /* สีขาว */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.config-display {
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    padding: 10px;
+    border: 1px solid #5b3f8d; /* สีม่วงอ่อน */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* สีพื้นหลังอ่อน */
+}
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#temperature {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%; /* ทำให้กว้างเต็มที่ */
+    max-width: 250px; /* ความกว้างสูงสุด */
+    border: 1px solid #5b3f8d; /* สีม่วงอ่อน */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6f2c91; /* สีม่วงเข้ม */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* เอฟเฟกต์เปลี่ยนสี */
+}
+
+button:hover {
+    background-color: #5b3f8d; /* สีม่วงอ่อน */
+}
+.navbar {
+    background-color: #6f2c91; /* สีม่วงเข้ม */
+    padding: 10px;
+    border-radius: 8px; /* มุมโค้ง */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงา */
+    margin: 20px; /* ระยะห่างด้านบนและล่าง */
+}
+
+.navbar ul {
+    list-style-type: none; /* ไม่มีจุดหน้าหรือเลขหน้า */
+    padding: 0;
+    margin: 0;
+    display: flex; /* ใช้ flexbox เพื่อจัดการเลย์เอาต์ */
+    justify-content: center; /* จัดกลาง */
+}
+
+.navbar li {
+    margin: 0 20px; /* ระยะห่างระหว่างรายการ */
+    position: relative; /* ตั้งค่าเป็น relative เพื่อใช้กับ ::after */
+}
+
+.navbar a {
+    color: rgb(234, 214, 244); /* สีตัวอักษร */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    font-weight: bold; /* ทำให้ตัวหนา */
+    padding: 10px 15px; /* เพิ่ม padding รอบๆ */
+    border-radius: 5px; /* มุมโค้งสำหรับลิงก์ */
+    transition: background-color 0.3s; /* เอฟเฟกต์เปลี่ยนสี */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* สีพื้นหลังเมื่อโฮเวอร์ */
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อโฮเวอร์ */
+}
+
+/* เส้นแบ่งระหว่างปุ่มใน navbar */
+.navbar li:not(:last-child)::after {
+    content: ""; /* ใช้ content ว่าง */
+    display: inline-block; /* แสดงผลเป็นบล็อก */
+    width: 1px; /* ความกว้างของเส้นแบ่ง */
+    height: 20px; /* ความสูงของเส้นแบ่ง */
+    background-color: rgba(255, 255, 255, 0.5); /* สีของเส้นแบ่ง */
+    margin-left: 20px; /* ระยะห่างด้านซ้าย */
+}
+
+
+@media (max-width: 600px) {
+    #temperature {
+        width: 100%; /* ทำให้กว้างเต็มที่บนหน้าจอเล็ก */
+    }
+
+    button {
+        width: 100%; /* ทำให้ปุ่มกว้างเต็มที่ */
+    }
+}
